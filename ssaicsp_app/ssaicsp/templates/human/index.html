@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}烟雾传感器首页{% endblock %}
+{% block tablename %}'human'{% endblock %}
+{% block script %}
+			//高级查询模板
+        	 var template1 =
+             {
+                 "groupOp": "AND",
+                 "rules": [
+                 { "field": "id", "op": "ne", "data": "73" },
+                 { "field": "actionname", "op": "cn", "data": "1" }
+                 ]
+             };
+
+             var template2 =
+             {
+                 "groupOp": "AND",
+                 "rules": [
+                   { "field": "actionname", "op": "eq", "data": "s" },
+                   { "field": "actioncode", "op": "le", "data": "管理员" }
+                 ]
+             };
+             
+            var $gridList = $("#gridList");
+            $gridList.dataGrid({
+                url: "show?tablename=human",
+                height: $(window).height() - 126,
+                //pager: 'pager',
+                //rowList: [10, 20, 30], //可调整每页显示的记录数   
+                //rowNum: 40,
+                pager: "#gridPager",
+                sortname: 'id',
+               	//search:true,
+                viewrecords: true,
+                colModel: [
+                    { label: "id", name: "id", width:50,hidden: false, key: true },
+					{ label: '传感器编号', name: 'sensor_code', width: 150, align: 'left' },
+                    { label: '数字信号', name: 'is_human', width: 150, align: 'left' },
+		            { label: '时间', name: 'create_time', width: 150, align: 'left',},
+					{ label: '状态', name: 'status', width: 150, align: 'center' }
+		        ]
+		    });
+{% endblock %}
+

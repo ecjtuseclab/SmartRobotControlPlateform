@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}烟雾传感器首页{% endblock %}
+{% block tablename %}'propertymapping'{% endblock %}
+{% block script %}
+			//高级查询模板
+        	 var template1 =
+             {
+                 "groupOp": "AND",
+                 "rules": [
+                 { "field": "id", "op": "ne", "data": "73" },
+                 { "field": "actionname", "op": "cn", "data": "1" }
+                 ]
+             };
+
+             var template2 =
+             {
+                 "groupOp": "AND",
+                 "rules": [
+                   { "field": "actionname", "op": "eq", "data": "s" },
+                   { "field": "actioncode", "op": "le", "data": "管理员" }
+                 ]
+             };
+             
+            var $gridList = $("#gridList");
+            $gridList.dataGrid({
+                url: "show?tablename=propertymapping",
+                height: $(window).height() - 126,
+                //pager: 'pager',
+                //rowList: [10, 20, 30], //可调整每页显示的记录数   
+                //rowNum: 40,
+                pager: "#gridPager",
+                sortname: 'id',
+               	//search:true,
+                viewrecords: true,
+                colModel: [
+                    { label: "id", name: "id", width:50,hidden: false, key: true },
+					{ label: '属性名称', name: 'property_name', width: 150, align: 'left' },
+                    { label: '属性值', name: 'property_value', width: 150, align: 'left' },
+                    { label: '属性描述', name: 'property_meaning', width: 150, align: 'left' },
+                    { label: '备注', name: 'remark', width: 150, align: 'left' },
+		            { label: '时间', name: 'create_time', width: 150, align: 'left',},
+					{ label: '状态', name: 'status', width: 150, align: 'center' }
+		        ]
+		    });
+{% endblock %}

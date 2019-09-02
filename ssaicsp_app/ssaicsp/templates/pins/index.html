@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}引脚传感器首页{% endblock %}
+{% block script %}
+    	//高级查询模板
+        	 var template1 =
+             {
+                 "groupOp": "AND",
+                 "rules": [
+                 { "field": "id", "op": "ne", "data": "73" },
+                 { "field": "actionname", "op": "cn", "data": "1" }
+                 ]
+             };
+
+             var template2 =
+             {
+                 "groupOp": "AND",
+                 "rules": [
+                   { "field": "actionname", "op": "eq", "data": "s" },
+                   { "field": "actioncode", "op": "le", "data": "管理员" }
+                 ]
+             };
+             
+            var $gridList = $("#gridList");
+            $gridList.jqGrid({
+                url: "getpins",
+                datatype:"json",
+                height: $(window).height() - 126,
+                //pager: 'pager',
+                //rowList: [10, 20, 30], //可调整每页显示的记录数   
+                rowNum: 50,
+                pager: "#gridPager",
+                //sortname: 'id',
+               	//search:true,
+                viewrecords: true,
+                colModel: [
+ 					{ label: '已使用传感器', name: 'sensor0', width: 250, align: 'center' },  
+ 					{ label: 'BCM', name: 'BCM0', width: 50, align: 'center'},
+ 					{ label: 'wPi', name: 'wPi0', width: 50, align: 'center' },
+ 					{ label: '描述', name: 'description0', width: 50, align: 'center' },
+					{ label: '引脚号', name: 'pin0', width: 50, align: 'center' },
+					{ label: '引脚号', name: 'pin1', width: 50, align: 'center' },					
+					{ label: '描述', name: 'description1', width: 50, align: 'center' },
+					{ label: 'wPi', name: 'wPi1', width: 50, align: 'center' },
+					{ label: 'BCM', name: 'BCM1', width: 50, align: 'center'},
+					{ label: '已使用传感器', name: 'sensor1', width: 250, align: 'center' },
+					{ label: '', name: '', width: 150, align: 'center' },					
+                ],
+               	gridComplete:function(){
+               		var ids = $gridList.jqGrid('getDataIDs');
+               		
+               		for(var i=0;i<ids.length;i++)
+               		{
+               			var row = $gridList.jqGrid('getRowData',ids[i]);
+               			var pin0 = "<span class='label label-primary'>"+row.pin0+"</span>";
+               			var pin1 = "<span class='label label-primary'>"+row.pin1+"</span>";
+               			$gridList.jqGrid('setRowData',ids[i],{pin0:pin0,pin1:pin1});
+               		}
+               	}
+            });
+            {% endblock %}

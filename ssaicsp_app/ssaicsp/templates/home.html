@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+
+<link href="static/nfine/css/framework-font.css" rel="stylesheet" />
+<link href="static/nfine/css/framework-theme.css" rel="stylesheet" />
+<link href="static/nfine/js/bootstrap/bootstrap.min.css" rel="stylesheet" />
+<link href="static/nfine/js/bootstrap/bootstrap-switch.min.css" rel="stylesheet" />
+
+<script src="static/nfine/js/jquery/jquery-2.1.1.min.js"></script>
+
+<script src="static/nfine/js/jqgrid/jqgrid.min.js"></script>
+<link href="static/nfine/js/jqgrid/jqgrid.css" rel="stylesheet" />
+<script src="static/nfine/js/jqgrid/grid.locale-cn.js"></script>
+
+<script src="static/nfine/js/bootstrap/bootstrap.js"></script>
+<script src="static/nfine/js/bootstrap/bootstrap-switch.js"></script>
+
+<link href="static/nfine/css/framework-ui.css" rel="stylesheet" />
+<script src="static/nfine/js/framework-ui.js"></script>
+<script src="static/nfine/js/indexsearch.js"></script>
+
+	<script>
+		$(function () {
+		    //jqgrid 加载完成重新渲染
+        
+        {% for sensor in sensors %}
+            
+            {% if sensor.type == 15 %}
+            $("[id^='led_{{ sensor.id }}_checkbox']").bootstrapSwitch({
+					onText:'on',
+					offText:'off',
+					onSwitchChange:function(e,e_state){
+						state = e_state.toString();
+                        parameters = 0
+                        if(state == 'true')
+                            parameters = $('#led_{{ sensor.id }}_value').val();
+                                    
+                       led_{{ sensor.id }}_fun(parameters);
+				}
+			});
+                                   
+            $("#led_{{ sensor.id }}_value").change(function(e){
+              var t = e.target;
+              led_{{ sensor.id }}_fun(t.value);
+              });             
+            
+            function led_{{ sensor.id }}_fun(parameters)
+            {
+                 $.ajax({
+            			url:"controlsensor",
+            			data:{controlname:12,type:'{{ sensor.type }}',sensor_code:'{{ sensor.sensor_code }}',parameters:parameters/100},
+            			type:"post",
+            			success:function(data){
+            				console.log(data);
+            				$("#result").html(data);		
+            			},
+            			error:function(data){
+            				console.log(data);
+            				$("#result").html(data);
+            			},
+            			complete:function(data){
+            				console.log(data);
+            			}
+            		});
+            }
+            
+            led_init_{{ sensor.id }}_fun()
+            
+            function led_init_{{ sensor.id }}_fun()
+            {
+                 var temp = $('#led_{{ sensor.id }}_value');
+                 temp.val(temp.val()*100);
+                 
+             }
+            {% endif %}
+        {% endfor %}
+		})
+
+</script>		
+</head>
+<body>
+    <form class="form-horizontal" role="form">
+    {% for sensor in sensors %}
+        {% if sensor.type == 15 %}
+        <div class="form-group">
+            <label class="col-sm-1 control-label" for="sensor_all">{{ sensor.sensor_name }}</label>
+            <div class="col-sm-2">
+                <div class="input-group m-b">
+                    <span class="input-group-addon">亮度</span>
+                    <input id="led_{{ sensor.id }}_value" type="text" class="form-control" value="{{ sensor.parameters }}">
+                    <span class="input-group-addon">%</span>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <input id="led_{{ sensor.id }}_checkbox" type="checkbox" {% if sensor.enable == 1 %}checked{% endif %}>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </form>
+</body>
+</html>
