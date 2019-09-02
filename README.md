@@ -3,7 +3,7 @@ SmartRobotControlPlateform——智能机器人控制平台
 
 说在前面<br>
 喜欢我们的项目请Fork、Star、Watching支持我们。<br>
-如果有宝贵的意见，请在Issue中回复，你们宝贵的意见是我们完善的动力。<br>
+如果有宝贵的意见，请在Issue中回复或者加QQ群：498487801，你们宝贵的意见是我们完善的动力。<br>
 
 开发人员：[康文洋](https://github.com/Little-kwy?tab=repositories)、陈祚松、夏萍萍、艾美珍、陈兰兰、张梦丽、易传佳<br>
 ### 作者康文洋正在找工作(应届生)，如果您对该项目感兴趣，请联系我：1981664245@qq.com
@@ -46,6 +46,9 @@ APP操控端，使用4G网络作为远程作业智能机器人端与数据中心
 在v0.02版中加入了激光雷达，履带式坦克控制，机械臂控制，4G通讯，遥感控制，ROS机器人系统，Kali渗透测试平台等。<br>
 未来打算实现分布式集群部署控制。<br>
 该框架仅用于学习交流探讨，切勿用于商业用途！！！
+
+QQ群扫码加入：<br>
+![image](https://raw.githubusercontent.com/ecjtuseclab/SmartRobotControlPlateform/master/498487801.png)
 
 演示Demo界面如下：<br>
 ![image](https://raw.githubusercontent.com/ecjtuseclab/SmartRobotControlPlateform/master/0.png)
