@@ -21,7 +21,11 @@ APP操控端，使用4G网络作为远程作业智能机器人端与数据中心
 具体环境配置请移步我的博客园文章：https://www.cnblogs.com/little-kwy/p/10341403.html
 
 # 版本说明：<br>
-目前开源的版本为v0.01版，v0.02版正在努力开发中....
+目前开源的版本为v0.01版，v0.02版正在努力开发中....<br>
+基于v0.01版已经可以用于搭建个人的智能家居系统，实现了温湿度、光照、雨滴等传感器的实时监控，以及开灯等实时控制功能。<br>
+在v0.02版中加入了激光雷达，履带式坦克控制，机械臂控制等<br>
+未来打算实现分布式集群部署控制。<br>
+该框架仅用于学习交流探讨，切勿用于商业用途！！！
 
 演示Demo界面如下：<br>
 ![image](https://raw.githubusercontent.com/ecjtuseclab/SmartRobotControlPlateform/master/0.png)
