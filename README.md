@@ -24,6 +24,7 @@ APP操控端，使用4G网络作为远程作业智能机器人端与数据中心
 目前开源的版本为v0.01版，v0.02版正在努力开发中....
 
 演示Demo界面如下：<br>
+![image](https://raw.githubusercontent.com/ecjtuseclab/SmartRobotControlPlateform/master/0.png)
 ![image](https://raw.githubusercontent.com/ecjtuseclab/SmartRobotControlPlateform/master/14.png)
 ![image](https://raw.githubusercontent.com/ecjtuseclab/SmartRobotControlPlateform/master/15.png)
 ![image](https://raw.githubusercontent.com/ecjtuseclab/SmartRobotControlPlateform/master/16.png)
