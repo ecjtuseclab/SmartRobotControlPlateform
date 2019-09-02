@@ -16,8 +16,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="570">
-                <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+              <first_editor relative-caret-position="660">
+                <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
               </first_editor>
               <second_editor />
             </state>
@@ -42,9 +42,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="280" />
-    <option name="y" value="8" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1529" />
     <option name="height" value="872" />
   </component>
@@ -101,19 +99,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567427995845</updated>
-      <workItem from="1567427997845" duration="3622000" />
+      <workItem from="1567427997845" duration="4036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3622000" />
+    <option name="totallyTimeSpent" value="4036000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="280" y="8" width="1529" height="872" extended-state="0" />
+    <frame x="-4" y="-4" width="1608" height="880" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12102772" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11489089" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -142,8 +140,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="570">
-            <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <first_editor relative-caret-position="660">
+            <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           </first_editor>
           <second_editor />
         </state>
