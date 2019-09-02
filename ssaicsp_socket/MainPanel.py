@@ -107,7 +107,7 @@ class MainPanel:
                   self.ServerInit()
                   self.StartServer()   
                   #开启client服务
-                  self.StartClient()
+                  #self.StartClient()
               elif cmd=='send':
                   self.StartSendTimer()
               elif cmd=='stop':

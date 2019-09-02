@@ -15,9 +15,11 @@ APP操控端，使用4G网络作为远程作业智能机器人端与数据中心
 器人搭载Tenserflow深度学习框架做图像识别，搭载基于树莓派的Kali做内网物理渗透攻击。
 
 * ssaicsp_app为树莓派web控制端：<br>
-    使用Django搭建
+    使用Django搭建<br>
+ 运行：python3 manage.py runserver 0.0.0.0:8989
      
 * ssaicsp_socket为树莓派服务控制端：<br>
+    MainPanel：服务控制端启动主程序
     AESHelper：加密帮助类<br>
     SM2：国密SM2公钥密码算法类<br>
     SM3：国密SM3散列算法类<br>
@@ -31,11 +33,12 @@ APP操控端，使用4G网络作为远程作业智能机器人端与数据中心
     MySQL：mysql数据库操作类<br>
     Logger：日志记录类<br>
     ...<br>
-    
+运行：python3 MainPanel.py<br> 
+输入：start
 
 * 运行环境：<br>
-    python3.5以上<br>
-    python安装：pip3 isnatll django <br>
+    python3.5及以上<br>
+    python安装：pip3 install django <br>
 
 具体环境配置请移步我的博客园文章：https://www.cnblogs.com/little-kwy/p/10341403.html
 ### 此外，作者正在找工作(应届生)，如果您对该项目感兴趣，请联系我们：1981664245@qq.com
