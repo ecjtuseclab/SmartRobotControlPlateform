@@ -14,7 +14,7 @@ class OperateMysql():
         self.Database=database
         self.Host=host
         self.Port=port
-        self.InitConnect()
+        self.InitConnect() 
         pass
     def InitConnect(self):
         self.con=MySQLdb.connect(user=self.User,passwd=self.Passwd,database=self.Database,host=self.Host,port=self.Port)
