@@ -8,7 +8,7 @@ Created on Mon Jul  9 20:41:03 2018
 import MySQLdb
 
 class OperateMysql():
-    def __init__(self,user='root',passwd='123456',database='ssaicsp',host='127.0.0.1',port=3306):
+    def __init__(self,user='root',passwd='1234567',database='ssaicsp',host='127.0.0.1',port=3306):
         self.User=user
         self.Passwd=passwd
         self.Database=database
