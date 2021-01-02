@@ -5,7 +5,7 @@ SmartRobotControlPlateform——智能机器人控制平台
 喜欢我们的项目请Fork、Star、Watching支持我们。<br>
 如果有宝贵的意见，请在Issue中回复或者加QQ群：498487801，你们宝贵的意见是我们完善的动力。<br>
 
-开发人员：[康文洋](https://github.com/Little-kwy?tab=repositories)（kangwenyangde@163.com）、陈祚松、夏萍萍、艾美珍、陈兰兰、张梦丽、易传佳<br>
+开发人员：[康文洋](https://github.com/m0w3n?tab=repositories)（kangwenyangde@163.com）、陈祚松、夏萍萍、艾美珍、陈兰兰、张梦丽、易传佳<br>
 
 # 智能机器人控制平台为基于4G网络的复杂环境特种作业智能机器人安全远控系统的关键部分
 基于4G网络的复杂环境特种作业智能机器人安全远控系统是在已经完成的安全态势感知工控系统基础上进
